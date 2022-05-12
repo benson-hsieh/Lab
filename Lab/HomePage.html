@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>首頁</title>
+</head>
+<body>
+    <script src="script.js"></script>
+<div class="d1"> 
+    <label class="logo">Laboratory</label>
+    <div class="btn">
+        <span class="fa fa-bars"></span>
+    </div>
+    
+    <nav class="sidebar">
+        <div class="text">功能選單</div>
+        <ul>
+            <li><a href="HomePage.html">首頁</a></li>         
+            <li>
+                <a href="#" class="feat-btn">管理員
+                    <span class="fa fa-caret-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">書籍管理系統</a></li>
+                    <li><a href="#">書籍借閱系統</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="serv-btn">使用者
+                    <span class="fa fa-caret-down second"></span>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="Book.html">書籍借閱</a></li>
+                    <li><a href="#">器材借用</a></li>
+                    <li><a href="#">個人電腦</a></li>
+                    <li><a href="#">討論桌</a></li>
+                </ul>
+            </li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="big_pic"></div>
+
+    <section class="events">
+        <div class="title">
+            <h1>最新消息</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="img/1.jpg">
+                <h4>熱門</h4>
+                <p>詳細內容</p>
+            </div>
+            <div class="col">
+                <img src="img/1.jpg">
+                <h4>熱門</h4>
+                <p>詳細內容</p>
+            </div>
+        </div>
+    </section>
+    <section class="events">
+        <div class="title">
+            <h1>最新消息</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="img/1.jpg">
+                <h4>熱門</h4>
+                <p>詳細內容</p>
+            </div>
+            <div class="col">
+                <img src="img/1.jpg">
+                <h4>熱門</h4>
+                <p>詳細內容</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="tab">
+        <button class="tablinks active1" onclick="openEvent(event, 'e1')" id="defaultOpen">事件一</button>
+        <button class="tablinks" onclick="openEvent(event, 'e2')">事件二</button>
+        <button class="tablinks" onclick="openEvent(event, 'e3')">事件三</button>
+    </div>
+      
+    <div id="e1" class="tabcontent">
+        <p>aaaaa</p>
+    </div>
+    <div id="e2" class="tabcontent">
+        <p>bbbb</p>
+    </div>
+    <div id="e3" class="tabcontent">
+        <p>ccccc</p>
+    </div>
+
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        $('.btn').click(function(){
+            $(this).toggleClass('click');
+            $('.sidebar').toggleClass('show');
+        });
+        $('.feat-btn').click(function(){
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function(){
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+        $('nav ul li').click(function(){
+            $(this).addClass('active').siblings().removeClass("active");
+        });
+    </script>
+</body>
+</html>

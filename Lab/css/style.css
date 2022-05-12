@@ -1,0 +1,229 @@
+/* 所有Html標籤都可引用* */
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+body{
+    background: linear-gradient(120deg,#2980b9,#8e44ad) no-repeat;
+    overflow-x: hidden;
+    height: 350vh;
+}
+.d1{
+    height:80px;
+    width: 100%;
+    background: #34495e;
+    margin-bottom: 50px;
+}
+div.big_pic{
+    height: 400px;
+    border:  1px solid red;
+}
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+/* 導覽列按鈕 */
+.btn{
+    position: absolute;
+    top: 15px;
+    right: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background-color: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.btn span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+/* 按鈕變叉叉 */
+.btn.click span:before{
+    content: '\f00d';
+}
+
+/* 側邊選單 */
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px ;
+    background: #1b1b1b;
+    transition: left 0.4s ease;
+}
+.sidebar.show{
+    left: 0px;
+}
+.sidebar .text{
+    color:white;
+    font-size:25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background: #1e1e1e;
+    letter-spacing: 1px;;
+}
+
+/* 導覽列內容 */
+nav ul{
+    background: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+nav ul li{
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li:last-child{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+nav ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+nav ul li.active a{
+    color:cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+}
+nav ul ul{
+    position:static;
+    display:none;
+}
+nav ul .feat-show.show{
+    display: block;
+}
+nav ul .serv-show.show1{
+    display: block;
+}
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a{
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+}
+nav ul li.active ul li a{
+    color:#e6e6e6;
+    background: #1b1b1b;
+    border-left-color: transparent;
+}
+nav ul ul li a:hover{
+    color:cyan!important;
+    background: #1e1e1e!important;
+}
+nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: 0.4s;
+}
+nav ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.line{
+    width:200px;
+    height: 4px;
+    background: #ca1a63;
+    margin:10px auto;
+    border-radius: 5px;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color:#07244a;
+}
+.row{
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content:space-between;
+}
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col img{
+    max-width: 90%;
+}
+.events .row{
+    margin-top:50px;
+}
+h4{
+    font-size: 3vmin;
+    color: white;
+    margin:20px auto;
+    text-align: center;
+}
+p{
+    text-align: center;
+    color:white;
+    padding: 0px 40px;
+}
+/* 頁籤面板 */
+.tab {
+    overflow: hidden;
+    border: 1px solid black;
+    background-color: #f1f1f1;
+    width:60%;
+    margin-left: 20%;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active1 {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-top: none;
+    width: 60%;
+    margin-left: 20%;
+  }
+

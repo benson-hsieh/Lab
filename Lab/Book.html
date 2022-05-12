@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>書籍借閱</title>
+</head>
+<body>
+<div class="d1"> 
+    <label class="logo">Laboratory</label>
+    <div class="btn">
+        <span class="fa fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">功能選單</div>
+        <ul>      
+            <li><a href="HomePage.html">首頁</a></li>       
+            <li>
+                <a href="#" class="feat-btn">管理員
+                    <span class="fa fa-caret-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">書籍管理系統</a></li>
+                    <li><a href="#">書籍借閱系統</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="serv-btn">使用者
+                    <span class="fa fa-caret-down second"></span>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="Book.html">書籍借閱</a></li>
+                    <li><a href="#">器材借用</a></li>
+                    <li><a href="#">個人電腦</a></li>
+                    <li><a href="#">討論桌</a></li>
+                </ul>
+            </li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="bulletin" style="display:flex">
+    <marquee direction="left" scrollamount="10">
+    <i class="fa fa-bullhorn" style="font-size:36px; margin: 10px;">
+        <b style="margin-left:5px">公告欄</b>
+    </i>
+    </marquee>
+</div>
+
+
+
+    <script>
+        $('.btn').click(function(){
+            $(this).toggleClass('click');
+            $('.sidebar').toggleClass('show');
+        });
+        $('.feat-btn').click(function(){
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function(){
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+        $('nav ul li').click(function(){
+            $(this).addClass('active').siblings().removeClass("active");
+        });
+    </script>
+</body>
+</html>
