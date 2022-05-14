@@ -138,10 +138,96 @@ nav ul li a span.rotate{
     transform: translateY(-50%) rotate(-180deg);
 }
 
+/* 公告欄 */
 .bulletin{
     margin-left: 15%;
     height: 60px;
     width: 70%;
     background: white;
     border: 2px solid black;
+}
+
+/* Tab面板 */
+.tab{
+    margin-top:40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color:#f1f1f1;
+    width:70%;
+    margin-left: 15%;
+}
+.tab button{
+    background-color:inherit;
+    float:left;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    padding:14px 16px;
+    transition: 0.3s;
+    font-size:17px;
+}
+.tab button:hover{
+    background-color:#ddd;
+}
+.tab button.active1{
+    background-color:#ccc;
+}
+.tabcontent{
+    background-color:white;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 70%;
+    margin-left:15%;
+}
+.row{
+    display: flex;
+    align-items:center;
+    width:100%;
+    justify-content: space-around;    
+}
+.row .col{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col img{
+    width: 90%;
+}
+.event .row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 搜尋欄 */
+div.search input[type=text]{
+    padding:10px;
+    font-size:17px;
+    border: 1px solid gray;
+    float:left;
+    width:60%;
+    background-color:#f1f1f1;
+    margin-left: 15%;
+    margin-top: 80px;
+}
+div.search button{
+    float:left;
+    width:10%;
+    padding:10px;
+    background-color: #2196f3;
+    color:white;
+    font-size:17px;
+    border:1px solid grey;
+    border-left:none;
+    cursor:pointer;
+    margin-top:80px;
+}
+div.search button{
+    background:#0b7dda;
+}
+div.search:after{
+    content:"";
+    clear:both;
+    display: table;
 }

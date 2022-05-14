@@ -49,6 +49,89 @@
     </i>
     </marquee>
 </div>
+<div class="tab">
+    <button class="tablinks active1" onclick="openBook(event,'hot')" id="defaultOpen">熱門書籍</button>
+    <button class="tablinks" onclick="openBook(event,'new')">新書上架</button>
+</div>
+
+<section class="event">
+    <div id="hot" class="tabcontent">
+        <div class="row">
+            <div class="col">
+                <h1>Top1</h1>
+                <img src="img/41.jpg">
+                <b>白話演算法! 培養程式<br>
+                設計的邏輯思維!<br></b>
+                出版日期:2020/10/24<br>
+                作者:郭柏堅
+            </div>
+            <div class="col">
+                <h1>Top2</h1>
+                <img src="img/42.jpg">
+                <b>白話演算法! 培養程式<br>
+                    設計的邏輯思維!<br></b>
+                    出版日期:2020/10/24<br>
+                    作者:郭柏堅
+            </div>
+            <div class="col">
+                <h1>Top3</h1>
+                <img src="img/43.jpg">
+                <b>白話演算法! 培養程式<br>
+                    設計的邏輯思維!<br></b>
+                    出版日期:2020/10/24<br>
+                    作者:郭柏堅
+            </div>
+            <div class="col">
+                <h1>Top4</h1>
+                <img src="img/44.jpg">
+                <b>白話演算法! 培養程式<br>
+                    設計的邏輯思維!<br></b>
+                    出版日期:2020/10/24<br>
+                    作者:郭柏堅
+            </div>
+            <div class="col">
+                <h1>Top5</h1>
+                <img src="img/45.jpg">
+                <b>白話演算法! 培養程式<br>
+                    設計的邏輯思維!<br></b>
+                    出版日期:2020/10/24<br>
+                    作者:郭柏堅
+            </div>
+        </div>  
+    </div>
+
+    <div id="new" class="tabcontent">
+        <div class="row">
+            <div class="col">
+                <h1>Top1</h1>
+                <img src="img/41.jpg">
+            </div>
+            <div class="col">
+                <h1>Top2</h1>
+                <img src="img/42.jpg">
+            </div>
+            <div class="col">
+                <h1>Top3</h1>
+                <img src="img/43.jpg">
+            </div>
+            <div class="col">
+                <h1>Top4</h1>
+                <img src="img/44.jpg">
+            </div>
+            <div class="col">
+                <h1>Top5</h1>
+                <img src="img/45.jpg">
+            </div>
+        </div>  
+    </div>
+</section>
+
+<div class="search">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</div>
+
+</body>
 
 
 
@@ -68,6 +151,23 @@
         $('nav ul li').click(function(){
             $(this).addClass('active').siblings().removeClass("active");
         });
+
+        function openBook(event,Name){
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for(i=0;i<tabcontent.length;i++){
+                tabcontent[i].style.display= "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for(i=0;i<tablinks.length;i++){
+                tablinks[i].className = tablinks[i].className.replace("active1","");
+            }
+            document.getElementById(Name).style.display="block";
+            event.currentTarget.className += "active1";
+        }
+
+        document.getElementById("defaultOpen").click();
+
     </script>
 </body>
 </html>

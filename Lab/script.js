@@ -8,9 +8,9 @@ function openEvent(event,Name){
 
     tablinks = document.getElementsByClassName("tablinks");
     for(i=0; i<tablinks.length; i++){
-        tablinks.className = tablinks[i].className.replace("active","");
+        tablinks[i].className = tablinks[i].className.replace("active1","");
     }
 
     document.getElementById(Name).style.display = "block";
-    event.currentTarget.className +="active";
+    event.currentTarget.className +="active1";
 }
