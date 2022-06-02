@@ -7,14 +7,15 @@
 }
 body{
     background: linear-gradient(120deg,#2980b9,#8e44ad) no-repeat;
-    height: 350vh;
+    height: 360vh;
 }
 .d1{
     height:80px;
     width: 100%;
     background: #34495e;
     margin-bottom: 50px;
-    position: fixed;
+    position: sticky;
+    top:0;
 }
 label.logo{
     font-size: 35px;
@@ -142,7 +143,7 @@ nav ul li a span.rotate{
 /* 公告欄 */
 .bulletin{
     margin-left: 15%;
-    height: 60px;
+    top: 80px;
     width: 70%;
     background: white;
     border: 2px solid black;
